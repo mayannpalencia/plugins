@@ -90,7 +90,8 @@ class PurchaseParam {
   PurchaseParam(
       {@required this.productDetails,
       this.applicationUserName,
-      this.sandboxTesting});
+      this.sandboxTesting,
+      this.oldSku});
 
   /// The product to create payment for.
   ///
@@ -107,6 +108,9 @@ class PurchaseParam {
 
   /// The 'sandboxTesting' is only available on iOS, set it to `true` for testing in AppStore's sandbox environment. The default value is `false`.
   final bool sandboxTesting;
+
+  /// The 'oldSku' is an optional string associated with the original Sku of the product that is required only for upgrading / downgrading subscription
+  final String oldSku;
 }
 
 /// Represents the transaction details of a purchase.
